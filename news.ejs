@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новости</title>
+</head>
+<body>
+  <h3><%= count %> последних новостей в категории <%= category %></h3>
+  <dl>
+    <% newsItems.forEach((item, index) => { %>
+      <dt><a href="<%= item.link %>"><%= index + 1 %>. <%= item.title %></a></dt>
+      <dd><%= item.description %></dd>
+    <% }); %>
+  </dl>
+</body>
+</html>
